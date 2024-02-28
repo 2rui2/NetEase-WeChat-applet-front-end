@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/songlist/songlist",
+    "pages/find/find",
+    "pages/singerDetail/singerDetail",
+     "pages/play/play"
+  ],
+  "tabBar": {
+    "color": "#c3c3c3",
+    "selectedColor": "#000",
+    "list": [{
+      "pagePath":  "pages/songlist/songlist",
+      "text": "首页",
+      "iconPath": "/image/首页1.png",
+      "selectedIconPath": "/image/首页.png"
+    },
+  {
+    "pagePath": "pages/find/find",
+    "text": "发现",
+    "iconPath": "/image/发现1.png",
+    "selectedIconPath": "/image/发现.png"
+  }]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#c20c0c",
+    "navigationBarTitleText": "网易云音乐",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
