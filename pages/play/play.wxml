@@ -1,0 +1,33 @@
+<image class="bg" src="{{music.al.picUrl}}"></image>
+<view class="musicName">{{music.name}}</view>
+<swiper>
+<!--转动图片-->
+<swiper-item class="imgbox">
+<image src="{{music.al.picUrl}}">1</image>
+</swiper-item>
+<!--歌词部分-->
+<swiper-item>
+<scroll-view scroll-y="true" scroll-top="{{top}}">
+<block wx:for="{{lrclist}}"  wx:for-index='in' wx:key="this">
+<view class="{{index==in?'color':''}}">{{item[1]}}</view>
+</block>
+</scroll-view>
+</swiper-item>
+</swiper>
+<!--播放格式-->
+<view class="playmode" bindtap="cutMode">
+<image src="/image/{{mode=='loop'?'循环':'单曲循环'}}.png"></image>
+</view>
+<!--进度条-->
+<view class="timebox">
+<view>{{nowtime}}</view>
+<slider bindchange="sliderchange" block-size="12" activeColor="#c20c0c" selected-color="#fff" max="{{endtime}}" value="{{playtime}}"></slider>
+<view>{{sumtime}}</view>
+</view>
+<!--底部-->
+<view class="footer">
+<image src="/image/上一首 上一个.png" bindtap="lastSong"></image>
+<image src="/image/{{action.method==='play'?'暂停':'播放'}}.png" bindtap="musicplay"></image>
+<image src="/image/下一个 下一首.png" bindtap="nextSong"></image>
+</view>
+<audio src="http://music.163.com/song/media/outer/url?id={{musicid}}.mp3" action="{{action}}" bindtimeupdate="timeUpdate" bindended="changMusic"></audio>

@@ -1,0 +1,101 @@
+page{
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+.bg{
+  height: 100%;
+  width: 180%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.4;
+  z-index: -1;
+}
+.musicName{
+  /* background-color: burlywood; */
+  font-size: 50rpx;
+  line-height:150rpx;
+  text-align: center;
+  color: #fff;
+}
+swiper{
+/* background-color: pink; */
+flex:1;
+}
+.imgbox{
+  display: flex;
+}
+swiper swiper-item image{
+  display:block;
+  width: 350rpx;
+  height: 350rpx;
+  border-radius: 50%;
+  border:100rpx solid rgb(34, 34, 34);
+  box-shadow: 3rpx 3rpx 10rpx black;
+  margin: auto;
+  animation:imgplay 20s linear infinite;
+}
+@keyframes imgplay{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+scroll-view{
+  height: 100%;
+  /* background-color:skyblue; */
+}
+scroll-view view{
+  color: rgb(158, 158, 158);
+  text-align: center;
+  font-size: 35rpx;
+  line-height: 60rpx;
+}
+ .color{
+ font-size:38rpx;
+ color: rgb(255, 255, 255);
+}
+.playmode{
+  height:60rpx;
+  width:70rpx;
+  /* background-color: silver; */
+  position: relative;
+  left:85%;
+}
+.playmode image{
+  width: 60rpx;
+  height:60rpx;
+}
+.timebox{
+  height:100rpx;
+  /* background-color: chocolate; */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.timebox view{
+  color: #fff;
+  font-size: 25rpx;
+  /* background-color: saddlebrown; */
+  width: 80rpx;
+}
+.timebox slider{
+  /* background-color: silver; */
+  width: 450rpx;
+}
+.footer{
+  height: 150rpx;
+  display: flex;
+justify-content:space-around;
+  align-items: flex-start;
+  /* background-color: skyblue; */
+}
+.footer image{
+  height: 100rpx;
+  width:100rpx;
+}

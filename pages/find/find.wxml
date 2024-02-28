@@ -1,0 +1,25 @@
+<view class="sbox">
+<view class="search" bindtap="searchBind"><image src="/image/搜索.png" ></image></view>
+<input bindinput="searchInput" class="txt" type="text" value="{{keyword?keyword:''}}"></input>
+<view class="can" style="display:{{keyword?'block':'none'}};" bindtap="cancalInput"><image src="/image/取消.png"></image></view>
+</view>
+<view class="musicbox">
+<block wx:for="{{songs}}" wx:key="this" wx:for-index="in">
+<view class="item">
+<view class="txtbox">
+<text class="mname">{{item.name}}</text>
+<view class="name">
+<block wx:for="{{item.ar}}" wx:key="this">
+<text>{{item.name}}</text>
+</block>
+<text>--{{item.alia?item.al.name:item.alia[0]}}</text>
+</view>
+</view>
+<view class="picimg" bindtap="playlink" data-index="{{in}}">
+<image  src="/image/播放1.jpg"></image>
+</view>
+</view>
+</block>
+</view>
+
+
